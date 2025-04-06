@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "c3586a1e-40e8-4dd7-8a5a-ff6b0ed46658",
+		"name": "Grocery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28250322"
+	},
+	"item": [
+		{
+			"name": "AddGrocery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tomato\",\r\n    \"price\": 50,\r\n    \"stock\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/grocery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGrocery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/grocery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrderGrocery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 123,\r\n    \"items\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Apple\",\r\n            \"price\": 1.5,\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Milk\",\r\n            \"price\": 3.0,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGroceryByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user/grocery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveGroceryItem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/grocery/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"grocery",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateGrocery",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Potato\",\n    \"price\": 70\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/grocery/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"grocery",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ManageStock",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stock\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/grocery/3/stocK",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"grocery",
+						"3",
+						"stocK"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
